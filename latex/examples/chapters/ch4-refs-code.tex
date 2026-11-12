@@ -1,0 +1,25 @@
+\chapter{References, Code and Commands}
+
+\section{Cross-references and citations}
+Use \verb|\label| and \verb|\ref| for cross-references:
+Chapter~\ref{ch:custom} is on custom commands.
+Citations use BibTeX: the standard references are \cite{lamport1994,knuth1984},
+and information theory started with \cite{shannon1948}.
+Hyperlinks: \url{https://www.latex-project.org/} or
+\href{https://www.overleaf.com}{Overleaf}.
+Footnote example.\footnote{A footnote appears at the bottom of the page.}
+
+\section{Code listings}
+\begin{lstlisting}[language=Python, caption={A Python listing}]
+def add(a, b):
+    return a + b
+
+print(add(2, 3))
+\end{lstlisting}
+
+Inline code: \lstinline|git commit -m "message"|.
+
+\section{Custom commands}
+\label{ch:custom}
+Commands defined in the preamble: \tool{Git}, \tool{LaTeX}, and a vector $\vect{x}$.
+Syntax: \verb|\newcommand{\name}[num args]{definition}|.
