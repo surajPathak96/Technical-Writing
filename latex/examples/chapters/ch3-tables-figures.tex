@@ -1,0 +1,65 @@
+\chapter{Tables and Figures}
+
+\section{Tables}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|r|}
+\hline
+\textbf{Left} & \textbf{Center} & \textbf{Right} \\ \hline
+A & B & C \\ \hline
+Long text & 12 & 3.14 \\ \hline
+\end{tabular}
+\caption{A basic table}
+\label{tab:basic}
+\end{table}
+
+Professional style with \texttt{booktabs}, \texttt{multicolumn} and \texttt{multirow}:
+\begin{table}[h]
+\centering
+\begin{tabular}{llr}
+\toprule
+\multicolumn{2}{c}{\textbf{Tool}} & \textbf{Year} \\
+\midrule
+\multirow{2}{*}{Version control} & Git & 2005 \\
+                                 & SVN & 2000 \\
+Documentation & Doxygen & 1997 \\
+\bottomrule
+\end{tabular}
+\caption{A table using booktabs}
+\label{tab:booktabs}
+\end{table}
+Tables~\ref{tab:basic} and~\ref{tab:booktabs} show two table styles.
+
+\section{Figures}
+\LaTeX{} can draw graphics itself using TikZ. A figure with a caption:
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+  \draw[thick,fill=blue!20] (0,0) rectangle (3,1.5);
+  \draw[thick,->] (3,0.75) -- (5,0.75);
+  \node at (1.5,0.75) {Source};
+  \node[draw,fill=green!20,minimum width=2cm,minimum height=1.5cm] at (6,0.75) {PDF};
+\end{tikzpicture}
+\caption{A simple TikZ diagram}
+\label{fig:tikz}
+\end{figure}
+See Figure~\ref{fig:tikz}.
+
+To include an image file use
+\verb|\includegraphics[width=0.6\textwidth]{image.png}| (needs \texttt{graphicx}).
+
+\subsection{Subfigures}
+\begin{figure}[h]
+\centering
+\begin{subfigure}{0.4\textwidth}
+  \centering
+  \begin{tikzpicture}\draw[fill=red!30] (0,0) circle (0.7);\end{tikzpicture}
+  \caption{Circle}
+\end{subfigure}
+\begin{subfigure}{0.4\textwidth}
+  \centering
+  \begin{tikzpicture}\draw[fill=yellow!40] (0,0) rectangle (1.4,1.4);\end{tikzpicture}
+  \caption{Square}
+\end{subfigure}
+\caption{Two subfigures}
+\end{figure}

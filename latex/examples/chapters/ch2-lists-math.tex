@@ -1,0 +1,55 @@
+\chapter{Lists and Mathematics}
+
+\section{Lists}
+\begin{itemize}
+  \item First item
+  \item Second item
+  \begin{itemize}
+    \item Nested item
+  \end{itemize}
+\end{itemize}
+
+\begin{enumerate}
+  \item Step one
+  \item Step two
+\end{enumerate}
+
+\begin{description}
+  \item[Git] Version control system.
+  \item[GitHub] Hosting platform for Git repositories.
+\end{description}
+
+\section{Mathematics}
+Inline math: $E = mc^2$ and $\alpha + \beta = \gamma$.
+
+Display math with numbering:
+\begin{equation}
+  x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+  \label{eq:quad}
+\end{equation}
+Equation~\ref{eq:quad} is the quadratic formula.
+
+Unnumbered display: \[ \sum_{i=1}^{n} i = \frac{n(n+1)}{2} \]
+
+Aligned equations:
+\begin{align}
+  (a+b)^2 &= a^2 + 2ab + b^2 \\
+  (a-b)^2 &= a^2 - 2ab + b^2
+\end{align}
+
+Integral and limit:
+\[ \int_{0}^{\infty} e^{-x}\,dx = 1, \qquad \lim_{x \to 0}\frac{\sin x}{x} = 1 \]
+
+Matrix:
+\[
+A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix},
+\qquad \vect{v} = \begin{pmatrix} x \\ y \end{pmatrix}
+\]
+
+Piecewise function:
+\[
+f(x) = \begin{cases}
+  x^2 & x \ge 0 \\
+  -x  & x < 0
+\end{cases}
+\]
