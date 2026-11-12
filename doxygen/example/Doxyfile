@@ -1,0 +1,28 @@
+# Minimal Doxyfile. All options not listed use Doxygen defaults.
+# Regenerate a full file with:  doxygen -g Doxyfile.full
+
+PROJECT_NAME           = "Calculator"
+PROJECT_NUMBER         = 1.0
+PROJECT_BRIEF          = "Doxygen demo for the TW class"
+OUTPUT_DIRECTORY       = docs_output
+CREATE_SUBDIRS         = NO
+
+INPUT                  = src mainpage.md
+FILE_PATTERNS          = *.h *.cpp *.md
+RECURSIVE              = YES
+USE_MDFILE_AS_MAINPAGE = mainpage.md
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+SOURCE_BROWSER         = YES
+
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+HTML_OUTPUT            = html
+
+# Set HAVE_DOT to YES if Graphviz (dot) is installed
+HAVE_DOT               = NO
+CALL_GRAPH             = NO
+CALLER_GRAPH           = NO
+QUIET                  = YES
